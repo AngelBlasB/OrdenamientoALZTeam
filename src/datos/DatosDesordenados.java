@@ -7,7 +7,7 @@ package datos;
 
 /**
  *
- * @author Lesli
+ * @author ALZTean
  */
 public class DatosDesordenados {
 
@@ -96,6 +96,75 @@ public class DatosDesordenados {
         return mostrarArreglo(arreglo);
     }
     
+    //Radiz ascendente
+    public String RadixAscendente(int[] arreglo) {
+        int m, i, j;
+        for (m = Integer.SIZE - 1; m >= 0; m--) {
+            int auxiliar[] = new int[arreglo.length];
+            j = 0;
+            for (i = 0; i < arreglo.length; i++) {
+                boolean mover = arreglo[i] << m >= 0;
+//Si m>=0 devuelve un true o un false para asignar en la varible mover el arreglo en la posicion i.
+                /*
+                 *if(x>y){
+                    mayor=x;
+                 }else{
+                    mayor=y;
+                 }
+                 Operador Ternario ?
+                 resultado=(condicion)? valor1:valor2
+                 mayor=(x>y)?x:y;
+                 */
+                if (m == 0 ? !mover : mover) {
+                    auxiliar[j] = arreglo[i];
+                    j++;
+                } else {
+                    arreglo[i - j] = arreglo[i];
+                }
+            }
+            for (i = j; i < auxiliar.length; i++) {
+                auxiliar[i] = arreglo[i - j];
+            }
+            arreglo = auxiliar;
+        }
+        System.out.println("El arreglo ordenado con Radix es: ");
+        return mostrarArreglo(arreglo);
+    }
+    
+    //Metodo RadixDesendente
+    public String RadixDescendente(int[] arreglo){
+        int m,i,j;
+        for(m=Integer.SIZE-1;m>=0;m--){
+            int auxiliar[]=new int[arreglo.length];
+             j=0;
+             for(i=0;i<arreglo.length;i++){
+                 boolean mover=arreglo[i] << m<=0;
+//Si m<=0 devuelve un true o un false para asignar en la varible mover el arreglo en la posicion i.
+                 /*
+                 *if(x>y){
+                    mayor=x;
+                 }else{
+                    mayor=y;
+                 }
+                 Operador Ternario ?
+                 resultado=(condicion)? valor1:valor2
+                 mayor=(x>y)?x:y;
+                 */
+                 if(m==0 ? !mover:mover){
+                     auxiliar[j]=arreglo[i];
+                     j++;
+                 }else{
+                     arreglo[i-j]=arreglo[i];
+                 } 
+             }
+             for(i=j;i<auxiliar.length;i++){
+                 auxiliar[i]=arreglo[i-j];
+             }
+             arreglo=auxiliar;
+        }
+        System.out.println("El arreglo ordenado con Radix es: ");
+        return mostrarArreglo(arreglo);
+    }
 
     public String mostrarArreglo(int[] arreglo) {
         int k;

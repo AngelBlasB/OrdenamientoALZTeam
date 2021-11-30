@@ -69,6 +69,25 @@ public class TestOrdenamiento {
         t = t2-t1;
         String cad = Double.toString(t);
         System.out.println("ns.ShellSortDescendente: "+ cad);
+        
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
+        t1 = System.nanoTime();
+        //RADIX
+        System.out.println("VECTOR NUMEROS ORDENADOS RADIX ASCENDENTE");
+        ordenar.RadixAscendente(vector);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String lista = Double.toString(t);
+        System.out.println("ns.ShellSortAscendente: "+lista);
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
+        t1 = System.nanoTime();
+        //RADIX
+        System.out.println("VECTOR NUMEROS ORDENADOS RADIX DESCENDENTE");
+        ordenar.RadixDescendente(vector);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String lista1 = Double.toString(t);
+        System.out.println("ns.ShellSortDescendente: "+ lista1);
     
 }//FIN MAIN
 }//FIN CLASE
