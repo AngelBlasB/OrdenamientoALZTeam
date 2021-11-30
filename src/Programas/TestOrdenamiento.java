@@ -78,7 +78,7 @@ public class TestOrdenamiento {
         t2 = System.nanoTime();
         t = t2-t1;
         String lista = Double.toString(t);
-        System.out.println("ns.ShellSortAscendente: "+lista);
+        System.out.println("ns.Radix: "+lista);
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
         t1 = System.nanoTime();
         //RADIX
@@ -87,7 +87,7 @@ public class TestOrdenamiento {
         t2 = System.nanoTime();
         t = t2-t1;
         String lista1 = Double.toString(t);
-        System.out.println("ns.ShellSortDescendente: "+ lista1);
+        System.out.println("ns.Radix: "+ lista1);
     
 }//FIN MAIN
 }//FIN CLASE
