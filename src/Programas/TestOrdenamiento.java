@@ -19,7 +19,7 @@ public class TestOrdenamiento {
     public static void main(String[] args) {
         
         DatosDesordenados ordenar= new DatosDesordenados();
-        int [] vector = new int[10];
+        int [] vector = new int[1000];
         int cont=1;
         long t, t1,t2; 
         
