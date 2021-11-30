@@ -7,7 +7,7 @@ package datos;
 
 /**
  *
- * @author ALZTeam
+ * @author Lesli
  */
 public class DatosOrdenados {
     private int [] valores; 
@@ -19,7 +19,6 @@ public class DatosOrdenados {
     public int getSize(){
         return valores.length; 
     }
-    
     @Override
     public String toString(){
         String cad = "Datos ordenados: ";
@@ -29,4 +28,4 @@ public class DatosOrdenados {
         return cad;
     }
     
-}
+}//FIN CLASE
