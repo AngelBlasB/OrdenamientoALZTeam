@@ -6,12 +6,10 @@
 package programas;
 
 import datos.DatosDesordenados;
-import datos.DatosOrdenados;
-import javax.swing.JOptionPane;
 
 /**
  *
- * @author ALZTeam
+ * @author Lesli
  */
 public class TestOrdenamiento {
 
@@ -20,36 +18,57 @@ public class TestOrdenamiento {
      */
     public static void main(String[] args) {
         
-        DatosDesordenados m;
-        //DatosOrdenados datosOrd;
-        int n, s; 
-        long t, t1, t2;
+        DatosDesordenados ordenar= new DatosDesordenados();
+        int [] vector = new int[10];
+        int cont=1;
+        long t, t1,t2; 
         
-        n = Integer.parseInt(JOptionPane.showInputDialog(
-                "¿Cuántos datos son?"));
-        s = Integer.parseInt(JOptionPane.showInputDialog(
-                "¿Cuál es el valor máximo?"));
-        
-        m = new DatosDesordenados(s, n);
-        m.generarValores();
-        System.out.println("" + m);
-        
-        t1 = System.nanoTime();   // start
-            DatosOrdenados mob = m.bubbleSort();
-            t2 = System.nanoTime();   // stop
-            t= t2 - t1;
-            System.out.println("n="+ n + " t=" + t + " ns. Burbuja=" + mob);
-            t1 = System.nanoTime();   // start
-            DatosOrdenados moi = m.insertSort();
-            t2 = System.nanoTime();   // stop
-            t = t2 - t1;
-            System.out.println("n="+ n + " t=" + t + " ns. Inserción" + moi);
-            t1 = System.nanoTime();   // start
-            DatosOrdenados mob3 = m.ShellSort();
-            t2 = System.nanoTime();   // stop
-            t= t2 - t1;
-            System.out.println("n="+ n + " t=" + t + " ns.Shellsort:" + mob3);
+        System.out.println("1,000 NUMEROS ALEATORIOS ENTRE 0 y 2,000");
+        for(int i=0;i<vector.length;i++){
+            vector[i]=(((int)(Math.random()*(10-0+1)+0)));
+            
+        }
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
+        t1 = System.nanoTime();
+        //BURBUJASORT
+        System.out.println("VECTOR NUMEROS DESORDENADOS");
+        ordenar.mostrarArreglo(vector);
+        System.out.println("VECTOR NUMEROS ORDENADOS BURBUJASORTASCENDENTE");
+        ordenar.burbujaSortAscendente(vector);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String ca= Double.toString(t);
+        System.out.println("ns.burbujaSortAscendente: "+ca);
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
+        t1 = System.nanoTime();
+        //SHELLSORT
+        System.out.println("VECTOR NUMEROS ORDENADOS BURBUJASORTDESCENDENTE");
+        ordenar.burbujaSortDescendente(vector);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String c = Double.toString(t);
+        System.out.println("ns.burbujaSortDescendente: "+c);
     
-    }
+
+        
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
+        t1 = System.nanoTime();
+        //SHELLSORT
+        System.out.println("VECTOR NUMEROS ORDENADOS SHELLSORTASCENDENTE");
+        ordenar.ShellSortAscendente(vector);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String cadena = Double.toString(t);
+        System.out.println("ns.ShellSortAscendente: "+cadena);
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
+        t1 = System.nanoTime();
+        //SHELLSORT
+        System.out.println("VECTOR NUMEROS ORDENADOS SHELLSORTDESCENDENTE");
+        ordenar.ShellSortDescendente(vector);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String cad = Double.toString(t);
+        System.out.println("ns.ShellSortDescendente: "+ cad);
     
-}
+}//FIN MAIN
+}//FIN CLASE
