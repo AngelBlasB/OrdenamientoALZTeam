@@ -19,7 +19,7 @@ public class TestOrdenamiento {
     public static void main(String[] args) {
         
         DatosDesordenados ordenar= new DatosDesordenados();
-        int [] vector = new int[1000];
+        int [] vector = new int[10];
         int cont=1;
         long t, t1,t2; 
         
@@ -33,7 +33,7 @@ public class TestOrdenamiento {
         //BURBUJASORT
         System.out.println("VECTOR NUMEROS DESORDENADOS");
         ordenar.mostrarArreglo(vector);
-        System.out.println("VECTOR NUMEROS ORDENADOS BURBUJASORTASCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS BURBUJASORT ASCENDENTE");
         ordenar.burbujaSortAscendente(vector);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -42,7 +42,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
         t1 = System.nanoTime();
         //SHELLSORT
-        System.out.println("VECTOR NUMEROS ORDENADOS BURBUJASORTDESCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS BURBUJASORT DESCENDENTE");
         ordenar.burbujaSortDescendente(vector);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -52,7 +52,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
         t1 = System.nanoTime();
         //SHELLSORT
-        System.out.println("VECTOR NUMEROS ORDENADOS SHELLSORTASCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS SHELLSORT ASCENDENTE");
         ordenar.ShellSortAscendente(vector);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -61,7 +61,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
         t1 = System.nanoTime();
         //SHELLSORT
-        System.out.println("VECTOR NUMEROS ORDENADOS SHELLSORTDESCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS SHELLSORT DESCENDENTE");
         ordenar.ShellSortDescendente(vector);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -71,7 +71,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
         t1 = System.nanoTime();
         //QUICKSORT
-        System.out.println("VECTOR NUMEROS ORDENADOS QUICKSORT ASCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS QUICKSORT ASCENDENTE");
         ordenar.QuickAscendente(vector,0,vector.length-1);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -80,7 +80,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
         t1 = System.nanoTime();
         //QUICKSORT
-        System.out.println("VECTOR NUMEROS ORDENADOS QUICKSORT DESCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS QUICKSORT DESCENDENTE");
         ordenar.QuickDescendente(vector,0,vector.length-1);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -90,7 +90,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
         t1 = System.nanoTime();
         //RADIX
-        System.out.println("VECTOR NUMEROS ORDENADOS RADIX ASCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS RADIX ASCENDENTE");
         ordenar.RadixAscendente(vector);
         t2 = System.nanoTime();
         t = t2-t1;
@@ -99,7 +99,7 @@ public class TestOrdenamiento {
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
         t1 = System.nanoTime();
         //RADIX
-        System.out.println("VECTOR NUMEROS ORDENADOS RADIX DESCENDENTE");
+        System.out.println("\nVECTOR NUMEROS ORDENADOS RADIX DESCENDENTE");
         ordenar.RadixDescendente(vector);
         t2 = System.nanoTime();
         t = t2-t1;
