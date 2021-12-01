@@ -7,7 +7,7 @@ package datos;
 
 /**
  *
- * @author Lesli
+ * @author ALZTeam
  */
 public class DatosOrdenados {
     private int [] valores; 
