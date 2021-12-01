@@ -105,8 +105,8 @@ public class TestOrdenamiento {
         ordenar.QuickDescendente(vector,0,vector.length-1);
         t2 = System.nanoTime();
         t = t2-t1;
-        String b = Double.toString(t);
-        System.out.println("ns.QuickSortDescendente: "+ b);
+        String b1 = Double.toString(t);
+        System.out.println("ns.QuickSortDescendente: "+ b1);
     
 }//FIN MAIN
 }//FIN CLASE
