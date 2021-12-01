@@ -78,7 +78,7 @@ public class TestOrdenamiento {
         t2 = System.nanoTime();
         t = t2-t1;
         String lista = Double.toString(t);
-        System.out.println("ns.Radix: "+lista);
+        System.out.println("ns.RadixAscendente: "+lista);
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
         t1 = System.nanoTime();
         //RADIX
@@ -87,7 +87,26 @@ public class TestOrdenamiento {
         t2 = System.nanoTime();
         t = t2-t1;
         String lista1 = Double.toString(t);
-        System.out.println("ns.Radix: "+ lista1);
+        System.out.println("ns.RadixDescendente: "+ lista1);
+ 
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
+        t1 = System.nanoTime();
+        //QUICKSORT
+        System.out.println("VECTOR NUMEROS ORDENADOS QUICKSORT ASCENDENTE");
+        ordenar.QuickAscendente(vector,0,vector.length-1);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String a = Double.toString(t);
+        System.out.println("ns.QuickSortAscendente: "+a);
+        //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA DESCENDENTE 
+        t1 = System.nanoTime();
+        //QUICKSORT
+        System.out.println("VECTOR NUMEROS ORDENADOS QUICKSORT DESCENDENTE");
+        ordenar.QuickDescendente(vector,0,vector.length-1);
+        t2 = System.nanoTime();
+        t = t2-t1;
+        String b1 = Double.toString(t);
+        System.out.println("ns.QuickSortDescendente: "+ b1);
     
 }//FIN MAIN
 }//FIN CLASE
