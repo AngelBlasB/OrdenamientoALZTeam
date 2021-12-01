@@ -95,7 +95,78 @@ public class DatosDesordenados {
         }
         return mostrarArreglo(arreglo);
     }
-    
+        public String QuickAscendente(int[] arreglo, int primero, int ultimo) {
+
+        int i, j, pivote, aux;
+
+        i = primero;
+        j = ultimo;
+
+        pivote = arreglo[(primero + ultimo) / 2];
+        System.out.println("El pivote es: " + pivote);
+
+        do {
+            while (arreglo[i] < pivote) {
+                i++;
+            }
+            while (arreglo[j] > pivote) {
+                j--;
+            }
+            //Aqui hacemos el intercambio
+            if (i <= j) {
+                aux = arreglo[i];
+                arreglo[i] = arreglo[j];
+                arreglo[j] = aux;
+                i++;
+                j--;
+            }
+        } while (i <= j);
+        if (primero < j) {
+            QuickAscendente(arreglo, primero, j);
+        }
+        if (i < ultimo) {
+            QuickAscendente(arreglo, i, ultimo);
+        }
+        return mostrarArreglo(arreglo);
+    }
+
+    public String QuickDescendente(int[] arreglo, int primero, int ultimo) {
+        int i, j, pivote, aux;
+        i = primero;
+        j = ultimo;
+        pivote = arreglo[(primero + ultimo) / 2];
+        System.out.println("El pivote es: " + pivote);
+
+        do {
+            while (arreglo[i] > pivote)
+            {
+                i++;
+            }
+            while (arreglo[j] < pivote) 
+            {
+                j--;
+            }
+            //Se hace el intercambio
+            if (i <= j)
+            {
+                aux = arreglo[i];
+                arreglo[i] = arreglo[j];
+                arreglo[j] = aux;
+                i++;
+                j--;
+            }
+        } while (i <= j);
+        if (primero < j)
+        {
+            QuickDescendente(arreglo, primero, j);
+        }
+        if (i < ultimo)
+        {
+            QuickDescendente(arreglo, i, ultimo);
+        }
+        return mostrarArreglo(arreglo);
+    }
+
     //Radiz ascendente
     public String RadixAscendente(int[] arreglo) {
         int m, i, j;
