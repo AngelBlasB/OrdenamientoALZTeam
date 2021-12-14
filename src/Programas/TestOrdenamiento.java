@@ -25,7 +25,7 @@ public class TestOrdenamiento {
         
         System.out.println("1,000 NUMEROS ALEATORIOS ENTRE 0 y 2,000");
         for(int i=0;i<vector.length;i++){
-            vector[i]=(((int)(Math.random()*(10-0+1)+0)));
+            vector[i]=(((int)(Math.random()*(2000-0+1)+0)));
             
         }
         //ACOMODAR LOS NUMEROS ALEATORIOS DE MANERA ASCENDENTE
